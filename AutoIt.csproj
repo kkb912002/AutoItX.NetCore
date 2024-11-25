@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+		<PackageId>AutoItX.NetCore</PackageId>
+		<Version>3.3.16.1</Version>
+		<Authors>AutoIt team, kkb912002</Authors>
+		<PackageIcon>icon.png</PackageIcon>
+		<PackageProjectUrl>https://www.autoitscript.com</PackageProjectUrl>
+		<PackageLicenseFile>LICENSE.md</PackageLicenseFile>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<PackageTags>autoit;automation;scripting</PackageTags>
+		<RepositoryType>git</RepositoryType>
+		<RepositoryUrl>https://github.com/kkb912002/AutoItX.NetCore</RepositoryUrl>
+		<Description>AutoIt package for .NET Core/5+, includes native DLL from AutoIt distribution.</Description>
+		<GenerateDocumentationFile>True</GenerateDocumentationFile>
+  </PropertyGroup>
+	
+	<ItemGroup>
+		<None Update="icon.png" Pack="true" PackagePath="" />
+		<None Include="LICENSE.md" Pack="true" PackagePath="" />
+		<None Include="README.md" Pack="true" PackagePath="" />
+		<None Include="*.dll">
+			<Pack>true</Pack>
+			<PackagePath>lib\$(TargetFramework)</PackagePath>
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+	</ItemGroup>
+
+</Project>
